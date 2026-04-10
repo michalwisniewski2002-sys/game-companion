@@ -1,5 +1,5 @@
 :root {
-  --bg: url("graphics/pro-tip.jpg");
+  --bg: #121621;
   --panel: #171a21;
   --panel-2: #1d2230;
   --text: #eceff4;
@@ -127,4 +127,8 @@ h1, h2, h3, p {
 
 ul {
   padding-left: 18px;
+}
+
+.hidden {
+  display: none;
 }

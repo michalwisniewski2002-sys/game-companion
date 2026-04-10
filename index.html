@@ -11,10 +11,10 @@
     <aside class="sidebar">
       <h1>Game Companion</h1>
       <nav>
-        <button class="nav-btn active">Home</button>
-        <button class="nav-btn">Library</button>
-        <button class="nav-btn">Companion</button>
-        <button class="nav-btn">Taste Profile</button>
+        <button class="nav-btn active" data-view="home">Home</button>
+        <button class="nav-btn" data-view="library">Library</button>
+        <button class="nav-btn" data-view="companion">Companion</button>
+        <button class="nav-btn" data-view="profile">Taste Profile</button>
       </nav>
     </aside>
 
@@ -25,29 +25,49 @@
           <h2>Horror</h2>
         </div>
         <div>
-          <p class="label">Current focus</p>
-          <h2>Second screen companion</h2>
+          <p class="label">Current view</p>
+          <h2 id="current-view-label">Home</h2>
         </div>
       </header>
 
-      <section class="chat-panel card">
-        <h3>Assistant</h3>
-        <div class="chat-messages">
-          <div class="message assistant">
-            What do you want tonight? A recommendation, setup help, or a session note?
+      <section id="view-home" class="view card">
+        <h3>Home</h3>
+        <p>Welcome to Game Companion.</p>
+        <div class="chat-panel">
+          <div class="chat-messages">
+            <div class="message assistant">
+              What do you want tonight? A recommendation, setup help, or a session note?
+            </div>
+          </div>
+          <div class="chat-input-row">
+            <input type="text" placeholder="Ask about what to play or how to tune a game..." />
+            <button>Send</button>
           </div>
         </div>
-        <div class="chat-input-row">
-          <input type="text" placeholder="Ask about what to play or how to tune a game..." />
-          <button>Send</button>
-        </div>
+      </section>
+
+      <section id="view-library" class="view card hidden">
+        <h3>Library</h3>
+        <p>Your game list will appear here.</p>
+        <div id="library-list"></div>
+      </section>
+
+      <section id="view-companion" class="view card hidden">
+        <h3>Companion</h3>
+        <p>This is your second-screen companion view.</p>
+        <button id="start-session-btn">Start Session</button>
+      </section>
+
+      <section id="view-profile" class="view card hidden">
+        <h3>Taste Profile</h3>
+        <p>Your Horror mood profile will live here.</p>
       </section>
     </main>
 
     <aside class="right-panel">
       <section class="card">
         <h3>Current game</h3>
-        <p>None selected</p>
+        <p id="current-game-name">None selected</p>
       </section>
 
       <section class="card">
