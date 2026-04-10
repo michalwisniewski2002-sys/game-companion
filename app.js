@@ -42,3 +42,21 @@ switchView("home");
 
 console.log("Game Companion loaded");
 console.log(window.seedGames);
+
+const libraryList = document.getElementById("library-list");
+
+function renderGameList() {
+    if (!libraryList) return;
+    libraryList.innerHTML = "";
+
+    window.seedGames.forEach((game) => {
+        const item = document.createElement("div");
+        item.classList.add("game-item");
+
+        item.textContent = game.name;
+
+        libraryList.appendChild(item);
+    });
+}
+
+renderGameList();

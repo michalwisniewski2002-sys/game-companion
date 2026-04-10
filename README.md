@@ -84,7 +84,7 @@ game-companion/
 #### navigation / HTML (skeleton)
 
 - [x] Side bar navigation buttons functional 
-- [ ] Home screen view 
+- [x] Home screen view 
 - [ ] Library screen view 
 - [ ] Live companion view 
 

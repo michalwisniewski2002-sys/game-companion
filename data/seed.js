@@ -1,20 +1,6 @@
 window.seedGames = [
-  {
-    id: "visage",
-    title: "Visage",
-    mood: "Horror",
-    status: "not_started"
-  },
-  {
-    id: "madison",
-    title: "MADiSON",
-    mood: "Horror",
-    status: "not_started"
-  },
-  {
-    id: "amnesia-bunker",
-    title: "Amnesia: The Bunker",
-    mood: "Horror",
-    status: "not_started"
-  }
+  { id: 1, name: "Visage"},
+  { id: 2, name: "MADiSON"},
+  { id: 3, name: "Amnesia: The Bunker"},
+  { id: 4, name: "The Callisto Protocol"},
 ];
