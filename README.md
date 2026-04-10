@@ -123,8 +123,27 @@ game-companion/
 - [ ] Note button 
 - [ ] Improve chat input UI 
 
----
+#### Backlog / Future Tasks
 
+- [ ] Add game status (playing / paused / finished)
+- [ ] Add simple session history view
+- [ ] Improve right panel layout further
+
+--- 
+
+# End of v1 
+
+- [ ] Can navigate between views
+- [ ] Can select a game
+- [ ] Can start a session
+- [ ] Timer works correctly
+- [ ] Can end session
+- [ ] Notes are optional (not forced)
+- [ ] Data persists after refresh
+
+--- 
+
+# Future versions 
 ### Phase 3 - Data storage (TBD) / Data base or text file ? 
 
 > If there is need for multiple tables then just use a database to keep everything in one place 
