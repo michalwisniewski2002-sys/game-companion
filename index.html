@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Companion</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h1>Game Companion</h1>
+      <nav>
+        <button class="nav-btn active">Home</button>
+        <button class="nav-btn">Library</button>
+        <button class="nav-btn">Companion</button>
+        <button class="nav-btn">Taste Profile</button>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="label">Active mood</p>
+          <h2>Horror</h2>
+        </div>
+        <div>
+          <p class="label">Current focus</p>
+          <h2>Second screen companion</h2>
+        </div>
+      </header>
+
+      <section class="chat-panel card">
+        <h3>Assistant</h3>
+        <div class="chat-messages">
+          <div class="message assistant">
+            What do you want tonight? A recommendation, setup help, or a session note?
+          </div>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" placeholder="Ask about what to play or how to tune a game..." />
+          <button>Send</button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="right-panel">
+      <section class="card">
+        <h3>Current game</h3>
+        <p>None selected</p>
+      </section>
+
+      <section class="card">
+        <h3>Quick ideas</h3>
+        <ul>
+          <li>Visage</li>
+          <li>MADiSON</li>
+          <li>Amnesia: The Bunker</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <script src="data/seed.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
