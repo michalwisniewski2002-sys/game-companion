@@ -4,7 +4,7 @@ A local, assistant-first PC game companion designed to help you:
 - choose what to play
 - improve immersion (HDR, audio, environment)
 - track gameplay sessions
-- evolve a personalised taste profile over time
+- evolve a personalized taste profile over time
 
 ---
 
@@ -63,5 +63,71 @@ game-companion/
 
 ---
 
-##  Development Workflow
+##  V1 task Board 
+> update this when doing work
+> use " [X] " when completed 
+> add new task when needed or issue comes up 
 
+---
+
+### Phase 1 - core  (bare bone)
+
+#### navigation / css (skeleton)
+
+- [ ] Side bar navigation buttons functional 
+- [ ] Home screen view 
+- [ ] Library screen view 
+- [ ] Live companion view 
+
+#### Systems / back end
+
+- [ ] Load games from 'seed.js' 
+- [ ] Display game list 
+- [ ] Select games from list 
+- [ ] Show selected game on side bar (in the right panel of ui)
+
+#### Session system / Companion 
+
+- [ ] Add start session button 
+- [ ] Add end session button 
+- [ ] Make timer for each session
+- [ ] Save session timer 
+- [ ] Save session details / notes 
+
+---
+
+### Phase 2 - Usability 
+
+#### UI Improvements  
+
+- [ ] Side bar styles 
+- [ ] Better buttons 
+- [ ] Spacing and layout 
+- [ ] Chat box 
+- [ ] Home screen 
+- [ ] Consistent design throughout the app 
+
+#### Companion Mode 
+
+- [ ] Show active session clearly 
+- [ ] Show current game with details on sidebar
+- [ ] Note button 
+- [ ] Improve chat input UI 
+
+---
+
+### Phase 3 - Local data storage thingy (TBD)
+
+- [ ] Save selected game 
+- [ ] Save sessions 
+- [ ] Load data on refresh 
+- [ ] Store game library 
+- [ ] Manual additions to game library 
+
+---
+
+### Phase 4 - Mock assistant chat (TBD)
+
+- [ ] Decide on AI and if we are going to use api or local ? 
+- [ ] Adding AI to program 
+- [ ] Polish chat box 
