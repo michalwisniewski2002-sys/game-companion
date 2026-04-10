@@ -30,21 +30,65 @@
         </div>
       </header>
 
-      <section id="view-home" class="view card">
-        <h3>Home</h3>
-        <p>Welcome to Game Companion.</p>
-        <div class="chat-panel">
-          <div class="chat-messages">
-            <div class="message assistant">
-              What do you want tonight? A recommendation, setup help, or a session note?
+      <section id="view-home" class="view hidden">
+        <div class="home-layout">
+          <section class="card hero-card">
+            <p class="label">Game Companion</p>
+            <h3>Welcome back</h3>
+            <p class="hero-text">
+              Your second-screen companion for horror, immersion, and better game choices.
+            </p>
+
+            <div class="quick-actions">
+              <button class="action-btn">What should I play?</button>
+              <button class="action-btn">Continue current game</button>
+              <button class="action-btn">Open Companion Mode</button>
             </div>
+          </section>
+
+          <div class="home-grid">
+            <section class="card home-info-card">
+              <p class="label">Current focus</p>
+              <h4>Horror Mood</h4>
+              <p>
+                Psychological horror, dread, atmosphere, and strong immersion.
+              </p>
+            </section>
+
+            <section class="card home-info-card">
+              <p class="label">Continue where you left off</p>
+              <h4>Resident Evil 7</h4>
+              <p>Currently on pause. Good immersion, but taking a short break.</p>
+            </section>
+
+            <section class="card home-info-card">
+              <p class="label">Recommended next</p>
+              <h4>Visage</h4>
+              <p>Best current fit for deep immersion, dread, and strong atmosphere.</p>
+            </section>
           </div>
-          <div class="chat-input-row">
-            <input type="text" placeholder="Ask about what to play or how to tune a game..." />
-            <button>Send</button>
-          </div>
+
+    <section class="card home-chat-card">
+      <div class="chat-header">
+        <div>
+          <p class="label">Assistant</p>
+          <h4>Ask for help</h4>
         </div>
-      </section>
+      </div>
+
+      <div class="chat-messages">
+        <div class="message assistant">
+          What do you want tonight? A recommendation, setup help, or a session note?
+        </div>
+      </div>
+
+      <div class="chat-input-row">
+        <input type="text" placeholder="Ask what to play or how to improve immersion..." />
+        <button>Send</button>
+      </div>
+    </section>
+  </div>
+</section>
 
       <section id="view-library" class="view card hidden">
         <h3>Library</h3>
