@@ -1,4 +1,4 @@
-# 🎮 Game Companion
+#  Game Companion
 
 A local, assistant-first PC game companion designed to help you:
 - choose what to play
@@ -8,7 +8,7 @@ A local, assistant-first PC game companion designed to help you:
 
 ---
 
-## 🧠 Concept
+##  Concept
 
 This app acts as a **second-screen companion** while you play.
 
@@ -31,7 +31,7 @@ Current focus:
 
 ---
 
-## 🖥️ How to Run
+##  How to Run
 
 This is a local project.
 
@@ -41,7 +41,7 @@ This is a local project.
 
 ---
 
-## 🧱 Current Structure
+##  Current Structure
 game-companion/
 ├── index.html
 ├── styles.css
@@ -52,7 +52,7 @@ game-companion/
 
 ---
 
-## 🧠 Key Features (Planned)
+##  Key Features (Planned)
 
 - Companion Mode (second monitor)
 - Game tracking system
@@ -63,5 +63,5 @@ game-companion/
 
 ---
 
-## ⚙️ Development Workflow
+##  Development Workflow
 
