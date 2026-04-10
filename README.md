@@ -1,3 +1,12 @@
+# How to use git - for Michal <3
+
+- Open VsCode 
+- Do "gget" in terminal 
+- Once done do "gsave"
+- Memorize it please 
+
+--- 
+
 #  Game Companion
 
 A local, assistant-first PC game companion designed to help you:
@@ -72,7 +81,7 @@ game-companion/
 
 ### Phase 1 - core  (bare bone)
 
-#### navigation / css (skeleton)
+#### navigation / HTML (skeleton)
 
 - [ ] Side bar navigation buttons functional 
 - [ ] Home screen view 
@@ -96,7 +105,7 @@ game-companion/
 
 ---
 
-### Phase 2 - Usability 
+### Phase 2 - Usability / CSS overhaul 
 
 #### UI Improvements  
 
@@ -116,7 +125,10 @@ game-companion/
 
 ---
 
-### Phase 3 - Local data storage thingy (TBD)
+### Phase 3 - Data storage (TBD) / Data base or text file ? 
+
+> If there is need for multiple tables then just use a database to keep everything in one place 
+> But if only one is needed just use a data file 
 
 - [ ] Save selected game 
 - [ ] Save sessions 
