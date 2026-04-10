@@ -46,17 +46,22 @@ console.log(window.seedGames);
 const libraryList = document.getElementById("library-list");
 
 function renderGameList() {
-    if (!libraryList) return;
-    libraryList.innerHTML = "";
+  if (!libraryList) return;
 
-    window.seedGames.forEach((game) => {
-        const item = document.createElement("div");
-        item.classList.add("game-item");
+  libraryList.innerHTML = "";
 
-        item.textContent = game.name;
+  window.seedGames.forEach((game) => {
+    const item = document.createElement("button");
+    item.classList.add("game-item");
+    item.type = "button";
 
-        libraryList.appendChild(item);
-    });
+    item.innerHTML = `
+      <span class="game-item-title">${game.name}</span>
+      <span class="game-item-meta">${game.genre}</span>
+    `;
+
+    libraryList.appendChild(item);
+  });
 }
 
 renderGameList();
