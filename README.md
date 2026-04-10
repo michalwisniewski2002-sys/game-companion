@@ -28,7 +28,7 @@ It is designed to:
 
 ---
 
-## 🚧 Project Status
+##  Project Status
 
 **V1 (in progress)**
 
