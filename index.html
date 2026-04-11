@@ -91,10 +91,20 @@
 </section>
 
       <section id="view-library" class="view card hidden">
-        <h3>Library</h3>
-        <p>Your game list will appear here.</p>
-        <div id="library-list"></div>
-      </section>
+  <div class="library-header">
+    <div>
+      <h3>Library</h3>
+      <p>Browse your current game library.</p>
+    </div>
+
+    <div class="library-view-toggle">
+      <button id="grid-view-btn" class="view-toggle-btn active" type="button">Grid</button>
+      <button id="list-view-btn" class="view-toggle-btn" type="button">List</button>
+    </div>
+  </div>
+
+  <div id="library-list"></div>
+</section>
 
       <section id="view-companion" class="view card hidden">
         <h3>Companion</h3>
