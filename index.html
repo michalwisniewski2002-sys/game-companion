@@ -90,7 +90,7 @@
   </div>
 </section>
 
-      <section id="view-library" class="view card hidden">
+<section id="view-library" class="view card hidden">
   <div class="library-header">
     <div>
       <h3>Library</h3>
@@ -102,6 +102,39 @@
       <button id="list-view-btn" class="view-toggle-btn" type="button">List</button>
     </div>
   </div>
+
+  <section class="add-game-card">
+    <h4>Add a game</h4>
+    <form id="add-game-form" class="add-game-form">
+      <input
+        id="new-game-name"
+        type="text"
+        placeholder="Enter game name..."
+        required
+      />
+      <button type="submit" class="action-btn">Add Game</button>
+    </form>
+  </section>
+
+  <section class="library-controls card">
+    <div class="library-filter-group">
+      <label for="mood-filter">Mood filter</label>
+      <select id="mood-filter">
+        <option value="All">All</option>
+        <option value="Horror">Horror</option>
+        <option value="Immersive">Immersive</option>
+        <option value="Action">Action</option>
+        <option value="Chill">Chill</option>
+        <option value="Narrative">Narrative</option>
+        <option value="Survival">Survival</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="library-scroll-area">
+    <div id="library-list"></div>
+  </div>
+</section>
 
   <div id="library-list"></div>
 </section>
@@ -122,15 +155,6 @@
       <section class="card">
         <h3>Current game</h3>
         <p id="current-game-name">None selected</p>
-      </section>
-
-      <section class="card">
-        <h3>Quick ideas</h3>
-        <ul>
-          <li>Visage</li>
-          <li>MADiSON</li>
-          <li>Amnesia: The Bunker</li>
-        </ul>
       </section>
     </aside>
   </div>

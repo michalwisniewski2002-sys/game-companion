@@ -5,13 +5,24 @@ const currentViewLabel = document.getElementById("current-view-label");
 const libraryList = document.getElementById("library-list");
 const currentGameName = document.getElementById("current-game-name");
 
-// buttons for switching Library layout mode
+// Library view toggle buttons
 const gridViewBtn = document.getElementById("grid-view-btn");
 const listViewBtn = document.getElementById("list-view-btn");
+
+// Add Game form elements
+const addGameForm = document.getElementById("add-game-form");
+const newGameNameInput = document.getElementById("new-game-name");
+
+// New: mood filter dropdown
+const moodFilter = document.getElementById("mood-filter");
 
 // App state
 let selectedGame = null;
 let libraryViewMode = "grid";
+let activeMoodFilter = "All";
+
+// Live app data
+let games = [...window.seedGames];
 
 // Converts internal view names into nicer labels for the UI.
 function formatViewLabel(viewName) {
@@ -29,7 +40,7 @@ function formatViewLabel(viewName) {
   }
 }
 
-// Switches between Home / Library / Companion / Profile views.
+// Switches between main app views.
 function switchView(viewName) {
   views.forEach((view) => {
     const isTarget = view.id === `view-${viewName}`;
@@ -44,7 +55,7 @@ function switchView(viewName) {
   currentViewLabel.textContent = formatViewLabel(viewName);
 }
 
-// Updates the right panel with the currently selected game.
+// Updates the right panel to show the selected game.
 function updateCurrentGamePanel() {
   if (!currentGameName) return;
 
@@ -55,7 +66,7 @@ function updateCurrentGamePanel() {
   }
 }
 
-// New: update Library container class depending on current layout mode.
+// Applies the current Library layout mode.
 function applyLibraryViewMode() {
   if (!libraryList) return;
 
@@ -67,7 +78,6 @@ function applyLibraryViewMode() {
     libraryList.classList.add("library-list");
   }
 
-  // Also update button active state
   if (gridViewBtn) {
     gridViewBtn.classList.toggle("active", libraryViewMode === "grid");
   }
@@ -77,32 +87,41 @@ function applyLibraryViewMode() {
   }
 }
 
-// Renders the game list into the Library view.
+// Returns the filtered games based on the active mood filter.
+function getFilteredGames() {
+  if (activeMoodFilter === "All") {
+    return games;
+  }
+
+  return games.filter((game) => game.mood === activeMoodFilter);
+}
+
+// Renders the game list from the live games array.
 function renderGameList() {
   if (!libraryList) return;
 
   libraryList.innerHTML = "";
 
-  window.seedGames.forEach((game) => {
+  const filteredGames = getFilteredGames();
+
+  filteredGames.forEach((game) => {
     const item = document.createElement("button");
     item.classList.add("game-item");
     item.type = "button";
 
-    // If this game is currently selected, add a selected class
+    // Highlight the currently selected game
     if (selectedGame && selectedGame.id === game.id) {
       item.classList.add("selected");
     }
 
     item.innerHTML = `
       <span class="game-item-title">${game.name}</span>
-      <span class="game-item-meta">Horror</span>
+      <span class="game-item-meta">${game.mood}</span>
     `;
 
     item.addEventListener("click", () => {
       selectedGame = game;
       updateCurrentGamePanel();
-
-      // Re-render the list so the selected visual state updates
       renderGameList();
     });
 
@@ -112,7 +131,24 @@ function renderGameList() {
   applyLibraryViewMode();
 }
 
-// Add click listeners to navigation buttons.
+// Creates a new game object and adds it to the live array.
+function addGame(gameName) {
+  const trimmedName = gameName.trim();
+
+  if (!trimmedName) return;
+
+  const newGame = {
+    id: Date.now(),
+    name: trimmedName,
+    mood: "Horror",
+    status: "not_started"
+  };
+
+  games.push(newGame);
+  renderGameList();
+}
+
+// Navigation button events
 navButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const viewName = button.dataset.view;
@@ -120,7 +156,7 @@ navButtons.forEach((button) => {
   });
 });
 
-// New: Library layout toggle buttons
+// Grid / List toggle events
 if (gridViewBtn) {
   gridViewBtn.addEventListener("click", () => {
     libraryViewMode = "grid";
@@ -135,6 +171,24 @@ if (listViewBtn) {
   });
 }
 
+// Mood filter event
+if (moodFilter) {
+  moodFilter.addEventListener("change", () => {
+    activeMoodFilter = moodFilter.value;
+    renderGameList();
+  });
+}
+
+// Add Game form submit event
+if (addGameForm) {
+  addGameForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    addGame(newGameNameInput.value);
+    addGameForm.reset();
+  });
+}
+
 // Initial app setup
 switchView("home");
 updateCurrentGamePanel();
@@ -142,3 +196,4 @@ renderGameList();
 
 console.log("Game Companion loaded");
 console.log(window.seedGames);
+console.log(games);

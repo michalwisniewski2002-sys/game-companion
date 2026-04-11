@@ -305,3 +305,75 @@ ul {
   border-color: #58627d;
   box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.35);
 }
+
+.add-game-card {
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+}
+
+.add-game-card h4 {
+  margin-bottom: 12px;
+}
+
+.add-game-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-game-form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #121621;
+  color: var(--text);
+}
+
+.library-controls {
+  margin-bottom: 14px;
+  padding: 14px 16px;
+}
+
+.library-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.library-filter-group label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.library-filter-group select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #121621;
+  color: var(--text);
+}
+
+.library-scroll-area {
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Optional scrollbar styling */
+.library-scroll-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.library-scroll-area::-webkit-scrollbar-thumb {
+  background: #2d3446;
+  border-radius: 999px;
+}
+
+.library-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
