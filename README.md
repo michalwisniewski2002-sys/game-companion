@@ -85,15 +85,18 @@ game-companion/
 
 - [x] Side bar navigation buttons functional 
 - [x] Home screen view 
-- [ ] Library screen view 
-- [ ] Live companion view 
+- [x] Library screen view 
+- [ ] Live companion view (diffrent from home view, "focus" mode and must be selected per game)
 
 #### Systems / back end
 
-- [ ] Load games from 'seed.js' 
-- [ ] Display game list 
-- [ ] Select games from list 
-- [ ] Show selected game on side bar (in the right panel of ui)
+- [x] Load games from 'seed.js' 
+- [x] Display game list 
+- [x] Select games from list 
+- [x] Show selected game on side bar (in the right panel of ui)
+- [x] Grid view for games list 
+- [x] Swappable view for games list 
+- [ ] Images for games list (manual for now)
 
 #### Session system / Companion 
 
