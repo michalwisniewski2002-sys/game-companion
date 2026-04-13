@@ -12,6 +12,7 @@ const listViewBtn = document.getElementById("list-view-btn");
 // Add Game form elements
 const addGameForm = document.getElementById("add-game-form");
 const newGameNameInput = document.getElementById("new-game-name");
+const newGameMoodInput = document.getElementById("new-game-mood");
 
 // New: mood filter dropdown
 const moodFilter = document.getElementById("mood-filter");
@@ -140,7 +141,7 @@ function addGame(gameName) {
   const newGame = {
     id: Date.now(),
     name: trimmedName,
-    mood: "Horror",
+    mood: gameMood,
     status: "not_started"
   };
 
@@ -184,7 +185,7 @@ if (addGameForm) {
   addGameForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    addGame(newGameNameInput.value);
+    addGame(newGameNameInput.value, newGameMoodInput.value);
     addGameForm.reset();
   });
 }
