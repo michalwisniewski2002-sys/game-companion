@@ -97,7 +97,7 @@ game-companion/
 - [x] Grid view for games list 
 - [x] Swappable view for games list 
 - [ ] Images for games list (manual for now)
-- [ ] Add games to game library in app ??? (what the hell why not can add images later manually but as long as text can be added then we good)
+- [x] Add games to game library in app ??? (what the hell why not can add images later manually but as long as text can be added then we good)
 
 #### Session system / Companion 
 
@@ -156,7 +156,7 @@ game-companion/
 - [ ] Save selected game 
 - [ ] Save sessions 
 - [ ] Load data on refresh 
-- [ ] Store game library 
+- [ ] Store game library in local storage 
 - [ ] Manual additions to game library 
 
 ---
