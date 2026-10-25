@@ -1,168 +1,60 @@
-# How to use git - for Michal <3
+# Game Companion
 
-- Open VsCode 
-- Do "gget" in terminal 
-- Once done do "gsave"
-- Memorize it please 
+A local, second-screen companion for PC gaming. It helps you choose what to play, track your sessions, set up for immersion (HDR, audio, environment) and build a taste profile over time.
 
---- 
+Built with plain HTML, CSS and JavaScript. No frameworks, no build step, and everything runs locally in the browser.
 
-#  Game Companion
+## Concept
 
-A local, assistant-first PC game companion designed to help you:
-- choose what to play
-- improve immersion (HDR, audio, environment)
-- track gameplay sessions
-- evolve a personalized taste profile over time
+A second-screen companion that sits beside the game while you play. It should feel non-intrusive, support immersion rather than distract from it, and learn your preferences over time.
 
----
+Planned features:
 
-##  Concept
-
-This app acts as a **second-screen companion** while you play.
-
-It is designed to:
-- feel non-intrusive
-- support immersion, not distract from it
-- learn from your preferences over time
-
----
-
-##  Project Status
-
-**V1 (in progress)**
-
-Current focus:
-- UI foundation
-- Companion Mode layout
-- Local data structure
-- Session system
-
----
-
-##  How to Run
-
-This is a local project.
-
-1. Open folder in VS Code  
-2. Open `index.html` in browser  
-3. (Optional) Use Live Server extension  
-
----
-
-##  Current Structure
-game-companion/
-├── index.html
-├── styles.css
-├── app.js
-├── data/
-│ └── seed.js
-└── README.md
-
----
-
-##  Key Features (Planned)
-
-- Companion Mode (second monitor)
-- Game tracking system
-- Session logging
-- Taste profile system (mood-based)
-- AI-assisted recommendations (future)
+- Companion Mode on a second monitor
+- Game tracking and session logging
+- Mood-based taste profile
+- AI-assisted recommendations
 - Immersion setup guidance
 
----
+## Status
 
-##  V1 task Board 
-> update this when doing work
-> use " [X] " when completed 
-> add new task when needed or issue comes up 
+**V1, in progress.** Working so far:
 
----
+- Sidebar navigation between Home, Library, Companion and Taste Profile
+- Home and Library views
+- Game library loaded from `data/seed.js`, shown as a list or a grid
+- Select a game and see it in the right-hand panel
+- Add games to the library from inside the app
 
-### Phase 1 - core  (bare bone)
+Next up: the session system (start and end a session, timer, notes) and the Live Companion view. The full task board is in [docs/ROADMAP.md](docs/ROADMAP.md).
 
-#### navigation / HTML (skeleton)
+## Running it
 
-- [x] Side bar navigation buttons functional 
-- [x] Home screen view 
-- [x] Library screen view 
-- [ ] Live companion view (diffrent from home view, "focus" mode and must be selected per game)
+1. Clone the repo and open the folder in VS Code.
+2. Open `index.html` in a browser, or use the Live Server extension so the page reloads as you edit.
 
-#### Systems / back end
+## Project structure
 
-- [x] Load games from 'seed.js' 
-- [x] Display game list 
-- [x] Select games from list 
-- [x] Show selected game on side bar (in the right panel of ui)
-- [x] Grid view for games list 
-- [x] Swappable view for games list 
-- [ ] Images for games list (manual for now)
-- [x] Add games to game library in app ??? (what the hell why not can add images later manually but as long as text can be added then we good)
+```
+game-companion/
+├── index.html        page layout and views
+├── styles.css        all styling
+├── app.js            navigation, library and selection logic
+├── data/
+│   └── seed.js       starter list of 20 games
+├── graphics/         background and image assets
+└── docs/
+    ├── ROADMAP.md        V1 task board and future phases
+    └── git-workflow.md   day-to-day git commands
+```
 
-#### Session system / Companion 
+## Roadmap
 
-- [ ] Add start session button 
-- [ ] Add end session button 
-- [ ] Make timer for each session
-- [ ] Save session timer 
-- [ ] Save session details / notes 
+| Phase | Focus |
+| --- | --- |
+| 1. Core | Navigation, library, game selection, session system |
+| 2. Usability | CSS overhaul, Companion Mode layout, chat box |
+| 3. Data storage | Save the library, sessions and selected game between visits |
+| 4. Assistant | Decide on an AI (API or local) and add the chat assistant |
 
----
-
-### Phase 2 - Usability / CSS overhaul 
-
-#### UI Improvements  
-
-- [ ] Side bar styles 
-- [ ] Better buttons 
-- [ ] Spacing and layout 
-- [ ] Chat box 
-- [ ] Home screen 
-- [ ] Consistent design throughout the app 
-
-#### Companion Mode 
-
-- [ ] Show active session clearly 
-- [ ] Show current game with details on sidebar
-- [ ] Note button 
-- [ ] Improve chat input UI 
-
-#### Backlog / Future Tasks
-
-- [ ] Add game status (playing / paused / finished)
-- [ ] Add simple session history view
-- [ ] Improve right panel layout further
-
---- 
-
-# End of v1 
-
-- [ ] Can navigate between views
-- [ ] Can select a game
-- [ ] Can start a session
-- [ ] Timer works correctly
-- [ ] Can end session
-- [ ] Notes are optional (not forced)
-- [ ] Data persists after refresh
-
---- 
-
-# Future versions 
-### Phase 3 - Data storage (TBD) / Data base or text file ? 
-
-> If there is need for multiple tables then just use a database to keep everything in one place 
-> But if only one is needed just use a data file 
-
-- [ ] Save selected game 
-- [ ] Save sessions 
-- [ ] Load data on refresh 
-- [ ] Store game library in local storage 
-- [ ] Manual additions to game library 
-
----
-
-### Phase 4 - Mock assistant chat (TBD)
-
-- [ ] Decide on AI and if we are going to use api or local ? 
-- [ ] Adding AI to program 
-- [ ] Polish chat box 
+Details and checkboxes are in [docs/ROADMAP.md](docs/ROADMAP.md).
